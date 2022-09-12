@@ -26,7 +26,6 @@ def Login():
     p = input("Password : ")
     if(checkLogin(u, p)):
         clearConsole()
-        # animka("Logging In", 20)
         downloadDepedencies('maindll', NULL)
         logDiscord('login_webhook', 'Uzytkownik - ' + u + 'pomyslnie sie zalogowal \nHWID : ' + hardwareid)
         injectMenu()
@@ -79,7 +78,6 @@ def injectMenu():
     if(proccessName != NULL):
         if(isAllowed(proccessName)):
             if(getPID(proccessName)):
-                animka('Injecting', 30)
                 injectPID(getPID(proccessName))
                 os.remove(pathMT2 + r'\lib\mini2.py')
             else:
