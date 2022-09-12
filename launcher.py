@@ -19,27 +19,9 @@ clearConsole = lambda: os.system('cls' if os.name in ('nt', 'dos') else 'clear')
 hardwareid = subprocess.check_output('wmic csproduct get uuid').decode().split('\n')[1].strip()
 hostname = socket.gethostname()
 
-def animka(tekstm,ile):
-
-    bar = [
-        "[|]",
-        "[/]",
-        "[-]",
-        "[\]",
-        "[|]"
-    ]
-    i = 0
-
-    while i < ile:
-        print(bar[i % len(bar)], tekstm,end="\r")
-        time.sleep(.2)
-        i += 1
-    clearConsole()
-
 def Login():
     global u,p
     os.system('color 3')
-    # animka('Connecting to Server', 55)
     u = input("Login : ")
     p = input("Password : ")
     if(checkLogin(u, p)):
