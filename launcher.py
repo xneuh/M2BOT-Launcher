@@ -139,10 +139,10 @@ def checkLogin(uname, passwd):
     if(uname and passwd != NULL):
 
         currDB = mysql.connector.connect(
-        host = "116.202.211.83",
-        user = "db_82806",
-        password = "Wkas5WjOSyvV",
-        database = "db_82806"
+        host = "DATABASE_IP",
+        user = "DATABASE_USERNAME",
+        password = "DATABASE_PASSWORD",
+        database = "DATABASE_NAME"
         )
 
         newCursor = currDB.cursor()
